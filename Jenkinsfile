@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Switch') {
       steps {
-        sh 'git branch'
+        sh 'git branch -a'
       }
     }
   }
