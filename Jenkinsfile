@@ -11,7 +11,9 @@ pipeline {
     }
     stage('Build2') {
       steps {
-        sh 'printenv'
+        withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+          sh 'printenv|grep GIT'
+        }
       }
     }
   }
