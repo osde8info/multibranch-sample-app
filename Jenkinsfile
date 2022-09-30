@@ -6,16 +6,15 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh './gradlew clean check --no-daemon'
+        sh 'printenv'
       }
     }
   }
   post {
     always {
-        junit(
-          allowEmptyResults: true, 
-          testResults: '**/build/test-results/test/*.xml'
-        )
+      steps {
+        sh 'date'
+      }
     }
   }
 }
