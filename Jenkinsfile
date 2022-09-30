@@ -4,7 +4,12 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   stages {
-    stage('Build') {
+    stage('Build1') {
+      steps {
+        sh 'printenv|grep GIT'
+      }
+    }
+    stage('Build2') {
       steps {
         sh 'printenv'
       }
