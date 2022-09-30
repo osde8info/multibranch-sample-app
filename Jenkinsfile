@@ -22,7 +22,7 @@ pipeline {
       steps {
         checkout([$class: 'GitSCM',
           branches: [[name: '01-warnings-ng']],
-                  userRemoteConfigs: [[url: ${GIT_URL}]]])
+                  userRemoteConfigs: [[url: {GIT_URL}]]])
         sh 'git branch'
       }
     }
