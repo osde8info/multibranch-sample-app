@@ -12,9 +12,7 @@ pipeline {
   }
   post {
     always {
-      steps {
-        sh 'date'
-      }
+      sh 'date'
     }
   }
 }
