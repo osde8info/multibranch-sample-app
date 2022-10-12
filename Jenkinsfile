@@ -35,7 +35,6 @@ pipeline {
         }
       }
       steps {
-        sh 'git branch -a'
         sh 'python --version'
       }
     }
